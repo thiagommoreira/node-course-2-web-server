@@ -58,6 +58,14 @@ app.get('/about', (req, res) => {
 
 });
 
+app.get('/portfolio', (req, res) => {
+
+	res.render('portfolio.hbs', {
+		pageTitle: 'Pagina portfolio'
+	});
+
+});
+
 app.get('/', (req, res) => {
 	res.render('index.hbs', {
 		pageTitle: 'Home Page',
@@ -67,6 +75,6 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(3000,() => {
+app.listen(port, () => {
 	console.log('server up');
 });
